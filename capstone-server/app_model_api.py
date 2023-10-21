@@ -7,9 +7,9 @@ import pandas as pd
 app = Flask(__name__)
 
 # Load the model and scaler
-model = load_model('content/model')
-scaler = joblib.load('capstone_scaler.pkl')
-encoder = joblib.load('capstone_encoder.pkl')
+model = load_model('../content/model')
+scaler = joblib.load('../capstone_scaler.pkl')
+encoder = joblib.load('../capstone_encoder.pkl')
 
 @app.route('/predict', methods=['POST'])
 def predict():
